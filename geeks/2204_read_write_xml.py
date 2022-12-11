@@ -29,21 +29,17 @@ with open('dict.xml', 'r') as f:
 # the returned object
 Bs_data = BeautifulSoup(data, "xml")
 
-# Finding all instances of tag
-# `unique`
+# Finding all instances of tag `unique`
 b_unique = Bs_data.find_all('unique')
 
 print(b_unique)
 
-# Using find() to extract attributes
-# of the first instance of the tag
+# Using find() to extract attributes of the first instance of the tag
 b_name = Bs_data.find('child', {'name': 'Frank'})
 
 print(b_name)
 
-# Extracting the data stored in a
-# specific attribute of the
-# `child` tag
+# Extracting the data stored in a specific attribute of the `child` tag
 value = b_name.get('test')
 
 print(value)

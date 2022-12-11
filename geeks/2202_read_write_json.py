@@ -59,9 +59,6 @@ without needing to convert it into an actual JSON object. It takes 2 parameters:
     dictionary – the name of a dictionary which should be converted to a JSON object.
     file pointer – pointer of the file opened in write or append mode.
 """
-# Python program to write JSON
-# to a file
-
 # import json
 
 # Data to be written
@@ -79,8 +76,6 @@ print()
 
 with open("myjson_2.json", "w") as outfile:
     json.dump(dictionary, outfile)
-
-# Reading JSON from a file using Python
 
 """
 Reading JSON from a file using  json.load()
@@ -142,8 +137,6 @@ https://www.geeksforgeeks.org/append-to-json-file-using-python/
 ###########
 # Example 1: Updating a JSON string.
 ###########
-# Python program to update JSON
-
 
 import json
 
@@ -171,8 +164,6 @@ print(s)
 ###########
 # Example 2: Updating a JSON file.
 ###########
-
-# Python program to update JSON
 
 import json
 

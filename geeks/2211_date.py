@@ -5,12 +5,10 @@ https://www.w3schools.com/python/python_datetime.asp
 A date in Python is not a data type of its own, but we can import a module named datetime to work with dates as date objects.
 """
 
-###########
-# Method 1: Writing JSON to a file in Python using json.dumps()
-###########
 import datetime
 
 x = datetime.datetime.now()
+print(">>>datetime.datetime.now()")
 print(x)
 print(type(x))
 
@@ -39,14 +37,21 @@ print()
 
 import time
 y = time.time()
+print(">>>time.time()")
 print(type(y))
 print(y)
 
 time.sleep(2)
 
+print(">>>Local time")
 str2 = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime(y))
 print(str2)
 
+print(">>>Local current time")
+str3 = time.strftime("%Y-%m-%d %H-%M-%S", time.localtime())
+print(str3)
 
-
+print(">>>UTC time")
+str4 = time.strftime("%Y-%m-%d %H-%M-%S", time.gmtime())
+print(str4)
 
