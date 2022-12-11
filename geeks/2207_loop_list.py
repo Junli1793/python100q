@@ -114,15 +114,43 @@ print(sorted(d1))
 print(d1)
 
 example_list = [5, 0, 6, 1, 2, 7, 3, 4]
-result_list1 = sorted(example_list, key=lambda x: x*-1)
+result_list1 = sorted(example_list, key=lambda x: x * -1)
 print(result_list1)
+print()
+
+"""
+A lambda function is a small anonymous function.
+A lambda function can take any number of arguments, but can only have one expression.
+
+lambda arguments : expression
+"""
+print(">>>lambda: anonymous function")
+x = lambda a, b: a * b
+print(x(5, 6))
+
+x = lambda a, b, c: a + b + c
+print(x(5, 6, 2))
+
+print(">>> The power of lambda is better shown when you use them as an anonymous function inside another function.")
+def myfunc(n):
+    return lambda a: a * n
+
+mydoubler = myfunc(2)
+mytripler = myfunc(3)
+
+print(mydoubler(11))
+print(mytripler(11))
+
+print()
 
 result_list2 = sorted(example_list, reverse=True)
 print(result_list2)
 
+print()
+
 # 复杂的实例
 s = "德国 10 11 16\n意大利 10 10 20\n荷兰 10 12 14\n法国 10 12 11\n英国 22 21 22\n中国 38 32 18\n日本 27 14 17\n美国 39 41 33\n俄罗斯奥委会 20 28 23\n澳大利亚 17 7 22\n匈牙利 6 7 7\n加拿大 7 6 11\n古巴 7 3 5\n巴西 7 6 8\n新西兰 7 6 7"
-stodata = s.split('\n',-1)
+stodata = s.split('\n', -1)
 
 # 使用sorted
 para = {}
@@ -137,8 +165,8 @@ for line in range(len(stodata)):
 new_para = sorted(para.items(), key=lambda x: (x[1], x[0]))
 print()
 
-c=[]
+c = []
 for i in new_para:
     c.append((i[0]))
 for j in range(15):
-    print(f"{(j+1):2d}  {c[j]}")
+    print(f"{(j + 1):2d}  {c[j]}")
