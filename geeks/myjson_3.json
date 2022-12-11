@@ -1,0 +1,44 @@
+{
+    "emp_details": [
+        {
+            "emp_name": "Nikhil1",
+            "email": "nikhil1@geeksforgeeks.org",
+            "job_profile": "Full Time"
+        },
+        {
+            "emp_name": "Nikhil2",
+            "email": "nikhil2@geeksforgeeks.org",
+            "job_profile": "Full Time"
+        },
+        {
+            "emp_name": "Nikhil3",
+            "email": "nikhil3@geeksforgeeks.org",
+            "job_profile": "Full Time"
+        },
+        {
+            "emp_name": "Nikhil4",
+            "email": "nikhil3@geeksforgeeks.org",
+            "job_profile": "Full Time"
+        },
+        {
+            "emp_name": "Nikhil5",
+            "email": "nikhil3@geeksforgeeks.org",
+            "job_profile": "Full Time"
+        },
+        {
+            "emp_name": "Nikhil6",
+            "email": "nikhil3@geeksforgeeks.org",
+            "job_profile": "Full Time"
+        },
+        {
+            "emp_name": "Nikhil7",
+            "email": "nikhil3@geeksforgeeks.org",
+            "job_profile": "Full Time"
+        },
+        {
+            "emp_name": "Nikhil8",
+            "email": "nikhil3@geeksforgeeks.org",
+            "job_profile": "Full Time"
+        }
+    ]
+}

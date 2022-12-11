@@ -1,0 +1,34 @@
+development:
+  debug: false
+  update_knowngood: false
+interpolate: null
+logging:
+  level: INFO
+  path: null
+sut:
+  cluster:
+    host: 10.10.10.10
+    mock: true
+    password: Maglev123
+    port: 2222
+    type: ON-PREM
+    username: admin
+  elastic:
+    password: 4dbe8e16-9488-48a1-aa70-c9d6cbe4697c-elasticsearch
+    username: elastic
+  grapevine:
+    host: null
+    password: null
+    username: null
+  maglev:
+    host: 10.10.10.10
+    password: Maglev123
+    port: 2222
+    username: maglev
+  service:
+    elasticsearch: 39200
+    kafka: 32111
+    mongodb: 32117
+    redis: 33000
+    schemaregistry: 39111
+    zookeeper: 32181

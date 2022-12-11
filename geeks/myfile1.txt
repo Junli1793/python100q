@@ -1,0 +1,2 @@
+open with w+ mode in myfile1.txt
+open with r+ mode and write to myfile1.txt
