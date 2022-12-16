@@ -1,8 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
 import time
-import calendar
+import datetime
 
 """
     python中时间日期格式化符号：
@@ -57,3 +57,7 @@ print("6, time.strptime 返回元组:", struct_time)
 print(type(struct_time))
 
 
+print("7, 用datetime:")
+date_time = datetime.datetime.now()
+print(type(date_time))
+print(date_time.strftime("%Y.%m.%d %H-%M-%S"))
