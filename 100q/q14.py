@@ -11,6 +11,9 @@
 
 """
 
+print()
+print("==============Answer 1==============")
+
 
 def reduceNum(n):
     print('{} = '.format(n), end=" ")
@@ -32,3 +35,53 @@ def reduceNum(n):
 
 reduceNum(90)
 reduceNum(100)
+
+print()
+print("==============Answer 2==============")
+
+
+def prime(n):
+    l = []
+    while n > 1:
+        for i in range(2, n + 1):
+            if n % i == 0:
+                n = int(n / i)
+                l.append(i)
+                break
+    return l
+
+
+s = input("输入一个正整数:")
+if s.isdigit() and int(s) > 0:
+    print(s, "=", "*".join([str(x) for x in prime(int(s))]))
+else:
+    print("请输入正确的正整数")
+
+print()
+print("==============Answer 3==============")
+
+inn = int(input("请输入要分解的正整数："))
+
+temp = []
+while inn != 1:
+    for i in range(2, inn + 1):
+        if inn % i == 0:
+            temp.append(i)
+            inn = inn // i
+            break
+print(temp)
+
+print()
+print("==============Answer 4==============")
+
+n = int(input("Please input a number:"))
+n1 = n
+l = []
+while n > 1:
+    for i in range(2, n + 1):
+        if n % i == 0:
+            n = n // i
+            l.append(str(i))
+            break
+
+print('%d=' % n1 + '*'.join(l))

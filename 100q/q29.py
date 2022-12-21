@@ -1,0 +1,62 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+
+"""
+题目：给一个不多于5位的正整数，要求：一、求它是几位数，二、逆序打印出各位数字。
+
+程序分析：学会分解出每一位数。
+
+"""
+
+print()
+print("==============Answer 1==============")
+
+x = int(input("请输入一个数:\n"))
+a = x // 10000
+b = x % 10000 // 1000
+c = x % 1000 // 100
+d = x % 100 // 10
+e = x % 10
+
+if a != 0:
+    print("5 位数：", e, d, c, b, a)
+elif b != 0:
+    print("4 位数：", e, d, c, b)
+elif c != 0:
+    print("3 位数：", e, d, c)
+elif d != 0:
+    print("2 位数：", e, d)
+else:
+    print("1 位数：", e)
+
+print()
+print("==============Answer 2==============")
+
+num = list(input('输入一个最多5位的数字:'))
+print(len(num))
+num.reverse()
+for i in range(len(num)):
+    print(num[i], end='')
+
+print()
+print("==============Answer 3==============")
+
+n = int(input('请输入大于10的数字:'))
+x = []
+i = 0
+while (int(n) != 0):
+    x.append(n % 10)
+    i += 1
+    n //= 10
+print('该数有 %d 位' % i)
+print('逆序为：')
+print(x)
+
+print()
+print("==============Answer 4==============")
+
+n=input('输入大于10的数字：')
+x=str(n)
+for i in range(len(x)-1,-1,-1):
+    print(x[i], end='')   # 号设置不换行
+

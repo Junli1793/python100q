@@ -30,10 +30,11 @@ import datetime
     %Z 当前时区的名称  # 乱码
     %% %号本身
 """
+print()
 print("1, 本地时间为 :", time.localtime())
 print(type(time.localtime()))
 
-
+print()
 print("2, time.strftime:")
 print(time.strftime('2-1, %Y-%m-%d %H:%M:%S', time.localtime(time.time())))
 # 暂停一秒
@@ -41,22 +42,23 @@ time.sleep(1)
 print(time.strftime('2-2, %Y-%m-%d %H:%M:%S', time.localtime()))
 print(time.strftime("2-3, %y/%m/%d %H-%M-%S", time.localtime()))
 
-
+print()
 print("3, 返回当前时间的时间戳（1970纪元后经过的浮点秒数）: ", time.time())
 print(type(time.time()))
 
-
+print()
 print(f"4-1, 返回系统运行时间: {time.perf_counter()}")
 print(f"4-2, 返回进程运行时间: {time.process_time()}")
 
+print()
 print("5, time.mktime 接受时间元组并返回时间戳 :", time.mktime( time.localtime()))
 
-
+print()
 struct_time = time.strptime("30 Nov 00", "%d %b %y")
 print("6, time.strptime 返回元组:", struct_time)
 print(type(struct_time))
 
-
+print()
 print("7, 用datetime:")
 date_time = datetime.datetime.now()
 print(type(date_time))

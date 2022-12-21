@@ -8,6 +8,44 @@
 
 """
 
+print()
+print("==============Answer 1==============")
 
 
+score = int(input('输入分数:\n'))
+if score >= 90:
+    grade = 'A'
+elif score >= 60:
+    grade = 'B'
+else:
+    grade = 'C'
 
+print('%d 属于 %s' % (score, grade))
+
+print()
+print("==============Answer 2==============")
+
+
+def k(x):
+    if x in range(60):
+        print('C')
+    elif x in range(60, 90):
+        print('B')
+    else:
+        print('A')
+
+
+# score = int(input('输入分数:\n'))
+k(score)
+
+print()
+print("==============Answer 3==============")
+
+# score = int(input('输入分数：'))
+print('A' if score > 89 else ('B' if score > 59 else 'C'))
+
+print()
+print("==============Answer 4==============")
+
+# score = int(input('输入分数:\n'))
+print(['C', 'C', 'B', 'A'][score // 30])
