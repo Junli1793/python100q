@@ -90,3 +90,12 @@ for c in s:
     else:
         others += 1
 print('char = %d,space = %d,digit = %d,others = %d' % (letters, space, digit, others))
+
+
+print()
+print("==============Answer 6==============")
+# s = input('输入一串字符：')
+s = "wo de ip dizhis 192.168.100.1, ni de ip dizhi shi 192.168.10.10"
+# ips = re.findall(r'\b(?:\d{1,3}\.){3}\d{1,3}\b', s)
+ips = re.findall(r'(?:\d{1,3}\.){3}\d{1,3}', s)
+print(ips)

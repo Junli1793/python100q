@@ -10,7 +10,7 @@ The text in JSON is done through quoted-string which contains the value in key-v
 It is similar to the dictionary in Python.
 """
 
-###########
-# Method 1: Writing JSON to a file in Python using json.dumps()
-###########
+
+print()
+print("==============Example 1: findall==============")
 
