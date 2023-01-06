@@ -50,7 +50,7 @@ for x in fibon(month):
 print()
 print("==============Answer 3==============")
 
-def Rabbit(num):
+def rabbits(num):
     i = 1
     a, b = 1, 1
     while i <= num:
@@ -59,10 +59,10 @@ def Rabbit(num):
         a, b = b, a + b
  
    
-list1 = [x for x in Rabbit(month)]
+list1 = [x for x in rabbits(month)]
 print(list1)
  
-for x in Rabbit(month):
+for x in rabbits(month):
     print(x)
 
 print()

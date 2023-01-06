@@ -1,6 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: UTF-8 -*-
 
+print()
+print("==============Answer 1: quick sort==============")
 
 def quick_sort(data):
     """快速排序"""
@@ -16,7 +18,6 @@ def quick_sort(data):
         return quick_sort(left) + [mid] + quick_sort(right)
     else:
         return data
-
 
 
 def q_sort(data):
@@ -39,6 +40,18 @@ def q_sort(data):
     else:
         return data
 
+
 list_of_number = [2, 3, 35, 7, 13, 1, 4, 6, 108, 110, 5, 55, 77, 9, 66, 10, 15, 19, 17, 12]
 # print(quick_sort(list_of_number))
 print(q_sort(list_of_number))
+
+
+print()
+print("==============Answer 2: 冒泡法==============")
+a = [2, 3, 35, 7, 13, 1, 4, 6, 108, 110, 5, 55, 77, 9, 66, 10, 15, 19, 17, 12]
+n = len(a)
+for i in range(n):
+    for j in range(i, n):
+        if a[i] > a[j]:
+            a[i], a[j] = a[j], a[i]
+print(a)

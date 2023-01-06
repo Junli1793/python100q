@@ -23,6 +23,7 @@ sorted 语法：
     返回重新排序的列表。
 
 """
+from pprint import pformat
 
 print()
 print("==============Example 1: sorted() function==============")
@@ -34,32 +35,35 @@ print(d1)
 
 print()
 print("==============Example 2: 复杂的实例==============")
-s = "德国 10 11 16\n意大利 10 10 20\n荷兰 10 12 14\n法国 10 12 11\n英国 22 21 22\n中国 38 32 18\n日本 27 14 17\n美国 39 41 33\n俄罗斯奥委会 20 28 23\n澳大利亚 17 7 22\n匈牙利 6 7 7\n加拿大 7 6 11\n古巴 7 3 5\n巴西 7 6 8\n新西兰 7 6 7"
-s_to_data = s.split('\n', -1)
+s = "德国 10 11 16\n意大利 10 10 20\n荷兰 10 12 14\n法国 10 12 11\n英国 22 21 22\n中国 38 32 18\n日本 27 14 17\n美国 39 41 33" \
+    "\n俄罗斯 20 28 23\n澳大利亚 17 7 22\n匈牙利 7 6 7\n加拿大 7 6 7\n古巴 7 3 5\n巴西 7 6 7\n新西兰 7 6 8"
+s_to_list = s.split('\n', -1)
 
-# 使用sorted on dictionary
-para = {}
+# dictionary
+country_dict = {}
 
 print(">>>parse s to list of list")
-for line in range(len(s_to_data)):
+for i in range(len(s_to_list)):
     # 每一行数据
-    data = s_to_data[line].split(' ')
-    print(data)
-    # 组装数据结构para={'China': [], 'Russia': []}
-    para[data[0]] = [int('-' + i) for i in data[1:]]
+    data = s_to_list[i].split(' ')
+    print(f"line {i}: {data}")
+    # 组装数据结构
+    # country_dict={'China': [-38, -32, -18], 'Russia': [-20, -28, -23]}
+    country_dict[data[0]] = [int('-' + i) for i in data[1:]]
 
 print()
-print(">>>convert list of list to dictionary")
-print(para)
+print(">>>dictionary converted from list of list")
+print(pformat(country_dict))
 print()
 
 print(">>>(x[1]代表奖牌数目, x[0]代表国家), 先以奖牌数排序(默认为升序)，奖牌数相同再以国家名排序")
-new_para = sorted(para.items(), key=lambda x: (x[1], x[0]))
-print(new_para)
+new_country_list = sorted(country_dict.items(), key=lambda x: (x[1], x[0]))
+print(pformat(new_country_list))
 print()
 
-c = []
-for i in new_para:
-    c.append((i[0]))
-for j in range(15):
-    print(f"{(j + 1):2d}  {c[j]}")
+rank_list = []
+for country in new_country_list:
+    rank_list.append((country[0]))
+
+for rank in range(len(rank_list)):
+    print(f"{(rank + 1):2d}  {rank_list[rank]}")

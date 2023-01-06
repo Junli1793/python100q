@@ -30,14 +30,17 @@ print("==============Example 1==============")
 a = [5, 7, 6, 3, 4, 1, 2]
 b = sorted(a)
 
+print("原列表不变")
 print(a)
+print("返回列表")
 print(b)
 
 print()
 print("==============Example 2==============")
 
-L = [('b', 2), ('a', 1), ('c', 3), ('d', 4)]
-c = sorted(L, key=lambda x: x[1])  # 利用key
+l2 = [('b', 2), ('a', 1), ('c', 3), ('d', 4)]
+print("利用key")
+c = sorted(l2, key=lambda x: x[1])
 print(c)
 
 print()

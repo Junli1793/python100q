@@ -56,17 +56,18 @@ print(l1)
 print()
 
 print("sorted() with key function")
-example_list = [5, 0, 6, 1, 2, 7, 3, 4]
-result_list1 = sorted(example_list, key=lambda x: x * -1)
+list2 = [5, 0, 6, 1, 2, 7, 3, 4]
+result_list1 = sorted(list2, key=lambda x: x * -1)
 print(result_list1)
 print()
 
 print("reverse=True")
-result_list2 = sorted(example_list, reverse=True)
+result_list2 = sorted(list2, reverse=True)
 print(result_list2)
 
 print()
 print("==============Example 3: sort list of dictionary==============")
+print("按照年龄排序，默认升序")
 list3 = [{"age": 20, "name": "a"}, {"age": 25, "name": "b"}, {"age": 10, "name": "c"}]
 list_sorted = sorted(list3, key=lambda x: x["age"])
 print(list_sorted)
@@ -83,10 +84,12 @@ print()
 print("==============Example 5: 字符串排序==============")
 
 list5 = ["delphi", "Delphi", "python", "Python", "c++", "C++", "c", "C", "golang", "Golang"]
-list5.sort(key=lambda ele: len(ele))  # 按元素长度顺序升序排列
+print("按字典顺序升序排列")
+list5.sort()
 print("升序:", list5)
 
-list5.sort(key=lambda ele: len(ele), reverse=True)  # 按降序排列
+print("按字典顺序降序排列")
+list5.sort(reverse=True)
 print("降序:", list5)
 
 print()
@@ -133,10 +136,13 @@ print()
 print("==============Example 8: 根据列表中元素的长度排序==============")
 
 list8 = ["delphi", "Delphi", "python", "Python", "c++", "C++", "c", "C", "golang", "Golang"]
-list8.sort(key=lambda ele: len(ele))  # 按元素长度顺序升序排列
+
+print("按元素长度顺序升序排列")
+list8.sort(key=lambda ele: len(ele))
 print("升序:", list8)
 
-list8.sort(key=lambda ele: len(ele), reverse=True)  # 按降序排列
+print("按降序排列")
+list8.sort(key=lambda ele: len(ele), reverse=True)
 print("降序:", list8)
 
 print("先按字符串长度升序排序，长度相同按字典序升序排序")
@@ -194,8 +200,10 @@ def two_d_list_sort2(sort_index="0,1,2"):
               ]
     key_set = ""
     for item in sort_index.split(","):
-        key_set += "ele[" + item + "]+"
-    key_set = key_set.rstrip("+")
+        key_set += "ele[" + item + "],"
+    key_set = key_set.rstrip(",")
+    print(f"key_set: {key_set}")
+    # list10.sort(key=lambda ele: (ele[2], ele[1]))
     list10.sort(key=lambda ele: eval(key_set))
     print("排序索引:", sort_index, "\n", list10)
 
@@ -205,10 +213,10 @@ if __name__ == "__main__":
     two_d_list_sort2("0")
     two_d_list_sort2("1")
     two_d_list_sort2("2")
-    two_d_list_sort2("1,0")
+    two_d_list_sort2("2,1")
 
 print()
-print("==============Example 11: 如果非要将列表里不同类型相比较==============")
+print("==============Example 11: 不同类型相不能比较，除非将列表元素转换成相同类型==============")
 l11 = [-1, -3, 1, 0, 3, 'a', 'b', 'c']
 l11.sort(key=str)
 print(l11)

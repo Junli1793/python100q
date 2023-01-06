@@ -21,8 +21,7 @@ finally:
 # Try Except in Python
 ###########
 
-# No exception Exception raised in try block
-def AbyB(a, b):
+def try_except_else_finally(a, b):
     try:
         c = ((a + b) // (a - b))
 
@@ -37,14 +36,28 @@ def AbyB(a, b):
         print("An error occurred")
 
     else:
-        print(c)
+        print(f"everything goes well, the result is: {c}")
 
     finally:
-        # this block is always executed
-        # regardless of exception generation.
-        print('This is always executed')
+        print('This is always executed regardless of exception generation.')
 
 
-AbyB(2.0, 3.0)
 print()
-AbyB(3.0, 3.0)
+print("==============Example 1: No exception raised in try block==============")
+try_except_else_finally(2, 3)
+
+print()
+print("==============Example 2: ZeroDivisionError exception raised==============")
+try_except_else_finally(3.0, 3.0)
+
+print()
+print("==============Example 3: unknown exception raised==============")
+try_except_else_finally('2', '3')
+
+print()
+print("==============Example 4: unknown exception raised==============")
+try_except_else_finally(3.0, [1, 2])
+
+print()
+print("==============Example 5: unknown exception raised==============")
+try_except_else_finally([1, 2], {1: 'a', 2: 'b'})
