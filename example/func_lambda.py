@@ -42,7 +42,16 @@ def myfunc(n):
 
 
 mydoubler = myfunc(2)
+"""
+def mydoubler(a):
+    return a*2
+"""
+
 mytripler = myfunc(3)
+"""
+def mytripler(a):
+    return a*3
+"""
 
 print(mydoubler(11))
 print(mytripler(11))

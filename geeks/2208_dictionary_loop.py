@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+# -*- coding: UTF-8 -*-
+
 """
 Python - Loop Dictionaries
 https://www.w3schools.com/python/python_dictionaries_loop.asp

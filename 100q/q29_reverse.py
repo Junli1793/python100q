@@ -55,8 +55,7 @@ print(x)
 print()
 print("==============Answer 4==============")
 
-n=input('输入大于10的数字：')
-x=str(n)
-for i in range(len(x)-1,-1,-1):
-    print(x[i], end='')   # 号设置不换行
-
+n = input('输入大于10的数字：')
+x = str(n)
+for i in range(len(x) - 1, -1, -1):
+    print(x[i], end='')  # 号设置不换行

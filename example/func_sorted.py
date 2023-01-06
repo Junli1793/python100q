@@ -2,6 +2,9 @@
 # -*- coding: UTF-8 -*-
 
 """
+Python3 sorted() 函数
+https://www.runoob.com/python3/python3-func-sorted.html
+
 sorted() 函数对所有可迭代的对象进行排序操作。
     sort 与 sorted 区别：
     1, sort 是应用在 list 上的方法，sorted 可以对所有可迭代的对象进行排序操作。
@@ -41,8 +44,42 @@ print()
 print("==============Example 3==============")
 
 students = [('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]
-a = sorted(students, key=lambda s: s[2])            # 按年龄排序
-b = sorted(students, key=lambda s: s[2], reverse=True)       # 按降序
 
+print("按年龄排序")
+a = sorted(students, key=lambda s: s[2])
 print(a)
+
+print("按年龄降序")
+b = sorted(students, key=lambda s: s[2], reverse=True)
 print(b)
+
+print("先分数排序，再按年龄排序")
+b = sorted(students, key=lambda s: (s[1], s[2]))
+print(b)
+
+
+print()
+print("==============Example 4==============")
+
+print("原列表：")
+a = [[1, 3], [3, 2], [2, 4], [1, 2], [1, 5], [2, 5]]
+print(a)
+
+print("先按第一个元素升序排序，第一个元素相同按第二个元素升序排序")
+a.sort()
+print(a)
+
+print("先按第一个元素升序排序，第一个元素相同则保持原来的顺序")
+a = [[1, 3], [3, 2], [2, 4], [1, 2], [1, 5], [2, 5]]
+a.sort(key=lambda x: x[0])
+print(a)
+
+print("先按第二个元素升序排序，第二个元素相同则保持原来的顺序")
+a = [[1, 3], [3, 2], [2, 4], [1, 2], [1, 5], [2, 5]]
+a.sort(key=lambda x: x[1])
+print(a)
+
+print("先按第二个元素升序排序，第二个元素相同按第一个元素降序排序")
+a.sort(key=lambda x: (x[1], -x[0]))
+print(a)
+
