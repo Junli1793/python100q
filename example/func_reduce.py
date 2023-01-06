@@ -63,3 +63,5 @@ print("==============Example 4==============")
 str1 = "hello"
 print(reduce(lambda x, y: y + x, str1))
 # 输出 olleh
+
+

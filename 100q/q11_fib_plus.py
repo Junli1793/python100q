@@ -39,7 +39,8 @@ print("==============Answer 2==============")
 def fibon(n):
     a = b = 1
     for i in range(n):
-        yield a, b
+        yield a
+        # yield a, b
         a, b = b, a + b
 
 

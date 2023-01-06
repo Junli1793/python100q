@@ -99,3 +99,6 @@ s = "wo de ip dizhis 192.168.100.1, ni de ip dizhi shi 192.168.10.10"
 # ips = re.findall(r'\b(?:\d{1,3}\.){3}\d{1,3}\b', s)
 ips = re.findall(r'(?:\d{1,3}\.){3}\d{1,3}', s)
 print(ips)
+
+
+
