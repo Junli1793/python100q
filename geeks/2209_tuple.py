@@ -190,8 +190,19 @@ print()
 print("==============Example 11: del tuple==============")
 
 print("t10: ", t10)
-# del t10[0]
-# del t10[1]
+try:
+    del t10[0]
+except TypeError as err:
+    print("TypeError occurs: ", err)
+
+try:
+    del t10[1]
+except TypeError as err:
+    print("TypeError occurs: ", err)
+
 del t10
-print("删除后的元组 t10: ")
-print(t10)
+try:
+    print("删除后的元组 t10: ")
+    print(t10)
+except NameError as err:
+    print("NameError occurs: ", err)

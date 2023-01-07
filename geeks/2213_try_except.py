@@ -26,10 +26,12 @@ def try_except_else_finally(a, b):
         c = ((a + b) // (a - b))
 
     # handles zerodivision exception
-    except ZeroDivisionError:
+    except ZeroDivisionError as err:
+        print(err)
         print("Can't divide by zero")
 
-    except NameError:
+    except NameError as err:
+        print(err)
         print("NameError Occurred and Handled")
 
     except:
@@ -61,3 +63,13 @@ try_except_else_finally(3.0, [1, 2])
 print()
 print("==============Example 5: unknown exception raised==============")
 try_except_else_finally([1, 2], {1: 'a', 2: 'b'})
+
+print(type(2.0))
+print(type(2))
+print(type(3/2))
+print(type(3//2))
+print(type(complex(2, 2)))
+print(type(True))
+print(type("2"))
+print(type(["2"]))
+print(type({1: 'a', 2: 'b'}))

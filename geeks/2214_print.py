@@ -11,6 +11,8 @@ There are several ways to format output.
     4, Formatting output using String modulo operator(%)
 
 """
+import json
+from pprint import pformat
 
 print()
 print("==============Example 1: modulo operator(%)==============")
@@ -40,10 +42,9 @@ print('{1} and {0}'.format('Geeks', 'Portal'))
 
 # the above formatting can also be done by using f-Strings
 # Although, this features work only with python 3.6 or above.
-print(f"I love {'Geeks'} for \"{'Geeks'}!\"")
-
-# using format() method and referring
-# a position of the object
+g = 'geeks'
+G = 'Geeks'
+print(f"I love {g} for \"{G}!\"")
 print(f"{'Geeks'} and {'Portal'}")
 
 print()
@@ -93,3 +94,27 @@ print(cstr.rjust(40, '-'))
 print('12'.zfill(5))
 print('-3.14'.zfill(7))
 print('3.14159265359'.zfill(5))
+
+print()
+print("==============Example 4: pprint.pformat()==============")
+
+data = """{
+	"Name": "Jennifer Smith",
+	"Contact Number": 7867567898,
+	"Email": "jen123@gmail.com",
+	"Hobbies":["Reading", "Sketching", "Horse Riding"]
+	}"""
+
+print(type(data))
+
+print("parsing string to JSON (dict)")
+json_obj = json.loads(data)
+print(type(json_obj))
+print(pformat(json_obj))
+
+print()
+print("==============Example 5: 原始字符串 r''==============")
+
+print(r"\n")
+print("\n")
+print("\t", R"\n")
