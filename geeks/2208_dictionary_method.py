@@ -15,7 +15,21 @@ Python字典包含了以下内置函数：
     str(dict)   输出字典，可以打印的字符串表示。
     type(variable)  返回输入的变量类型，如果变量是字典就返回字典类型。
 
-Python字典包含了12个内置方法
+Python字典包含了12个内置方法:
+    clear(): Remove all items from the dictionary.
+    copy(): Return a shallow copy of the dictionary.
+    fromkeys(iterable[, v]): Create a new dictionary with keys from iterable and values set to v. If v is not specified, the values are set to None.
+    get(key[, default]): Return the value for key if key is in the dictionary, else default. If default is not provided, it defaults to None.
+    items(): Return a new object of the dictionary's items in (key, value) format.
+    keys(): Return a new object of the dictionary's keys.
+    pop(key[, default]): Remove the item with key key from the dictionary. If key is not found, default is returned if provided, otherwise a KeyError is raised.
+    popitem(): Remove and return an arbitrary (key, value) pair from the dictionary.
+    setdefault(key[, default]): If key is in the dictionary, return its value. If not, insert key with a value of default and return default. default defaults to None.
+    update([other]): Update the dictionary with the key/value pairs from other, overwriting existing keys.
+    values(): Return a new object of the dictionary's values.
+
+You can find a complete list of the methods available for dictionaries in the Python documentation:
+https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
 
 """
 
@@ -31,6 +45,19 @@ seq = ('rice', 'bread', 'noodle')
 d0 = dict.fromkeys(seq, 200)
 print(d0)
 print("Length:", len(d0))
+print()
+
+dict_sample_01 = {1: 12, '2': 14, 1: 16}
+print(dict_sample_01)
+dict_sample_02 = dict.fromkeys('123')
+print(dict_sample_02)
+print()
+
+first_dict = {'name': 'Tom', 'age': 44}
+second_dict = {'occupation': 'actor', 'nationality': 'British'}
+print("merging 2 dictionary")
+final_dict = {**first_dict, **second_dict}
+print(final_dict)
 
 print()
 print("==============Example 1: dict.update(dict2)==============")
@@ -86,14 +113,15 @@ print()
 print("==============Example 4: dict.get(key[, value]) and dict.setdefault(key, default=None)==============")
 
 print("get(key) 返回指定键的值，如果键不在字典中返回默认值 None 或者设置的默认值。")
-print("rice : ", d.get('rice'))
-print("rice : ", d['rice'])
+print("d.get('rice') : ", d.get('rice'))
+print("d['rice'] : ", d['rice'])
 
-print("pork : ", d.get('pork'))
-print("pork : ", d.get('pork', 1000))
+print("d.get('pork') : ", d.get('pork'))
+print("d.get('pork', 1000) : ", d.get('pork', 1000))
 
 try:
-    print("pork : ", d['pork'])
+    print("d['pork'] : ")
+    print(d['pork'])
 except KeyError as err:
     print("KeyError occurs: ", err)
 
@@ -105,6 +133,12 @@ print("pork : ", d.setdefault('pork', 1000))
 print(d)
 
 print("beef : ", d.setdefault('beef'))
+print(d)
+
+print("sausage : ", d.setdefault('sausage'))
+print(d)
+
+print("sausage : ", d.setdefault('sausage', 10))
 print(d)
 
 print()

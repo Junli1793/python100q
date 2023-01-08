@@ -18,12 +18,10 @@ sudo aptitude install // debinal OS flavor
 import yaml
 from pprint import pformat
 
-
 def read_my_yaml(yaml_file):
     with open(yaml_file, "r") as yaml_file:
         config = yaml.safe_load(yaml_file)
         return config
-
 
 def replace_port_in_yaml(yaml_file, service, port):
     # config_dict = yaml.full_load(open(yaml_file))
@@ -35,10 +33,25 @@ def replace_port_in_yaml(yaml_file, service, port):
 
 
 yaml_file = "myyaml1.yaml"
+
+print()
+print("==============Example 1: yaml.safe_load(yaml_file)==============")
 print(pformat(read_my_yaml(yaml_file)))
+
+print()
+print("==============Example 2: yaml.dump(config_dict, file, default_flow_style=False)==============")
 replace_port_in_yaml(yaml_file, "elasticsearch", 39300)
+
+print()
+print("==============Example 1: yaml.safe_load(yaml_file)==============")
 print(pformat(read_my_yaml(yaml_file)))
+
+print()
+print("==============Example 2: yaml.dump(config_dict, file, default_flow_style=False)==============")
 replace_port_in_yaml(yaml_file, "elasticsearch", 39200)
+
+print()
+print("==============Example 1: yaml.safe_load(yaml_file)==============")
 print(pformat(read_my_yaml(yaml_file)))
 
 print()

@@ -8,7 +8,21 @@ Python 已经内置确定序列的长度以及确定最大和最小的元素的�
     min(list)   返回列表元素最小值
     list(seq)   将元组转换为列表
 
-Python列表包含11个方法
+Python列表包含11个方法:
+    append(x): Add an item to the end of the list.
+    extend(iterable): Extend the list by appending all the items from the iterable.
+    insert(i, x): Insert an item at a given position.
+    remove(x): Remove the first item from the list whose value is equal to x.
+    pop([i]): Remove the item at the given position in the list, and return it. If no index is specified, pop removes and returns the last item in the list.
+    clear(): Remove all items from the list.
+    index(x[, start[, end]]): Return the index in the list of the first item whose value is equal to x. The optional start and end arguments specify the slice of the list to search.
+    count(x): Return the number of times x appears in the list.
+    sort(key=None, reverse=False): Sort the items of the list in place. The optional key argument specifies a function of one argument that is used to extract a comparison key from each list element. The optional reverse argument is a boolean value that determines whether the list should be sorted in descending or ascending order.
+    reverse(): Reverse the elements of the list in place.
+    copy(): Creates a new list with a copy of the elements in the original list.
+
+You can find a complete list of the methods available for lists in the Python documentation:
+https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
 
 """
 

@@ -34,8 +34,8 @@ def try_except_else_finally(a, b):
         print(err)
         print("NameError Occurred and Handled")
 
-    except:
-        print("An error occurred")
+    except Exception as err:
+        print("An error occurred: ", err)
 
     else:
         print(f"everything goes well, the result is: {c}")

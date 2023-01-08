@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <child name="Frank">
+        <name>Frank</name>
+        <age>30</age>
+        <address>
+            <street>123 Main Street</street>
+            <city>New York</city>
+            <state>NY</state>
+            <zipcode>10001</zipcode>
+        </address>
+    </child>
+    <child name="Jane">
+        <name>Jane</name>
+        <age>25</age>
+        <address>
+            <street>456 Maple Avenue</street>
+            <city>Los Angeles</city>
+            <state>CA</state>
+            <zipcode>90210</zipcode>
+        </address>
+    </child>
+</root>

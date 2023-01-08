@@ -3,6 +3,17 @@
 
 """
 python3 共有40个常用内建函数
+    'capitalize', 'title', 'swapcase', 'upper', 'lower',
+    'center', 'ljust', 'lstrip', 'rstrip', 'rjust', 'zfill',
+    'count', 'index', 'rindex', 'find', 'rfind', 'endswith', 'startswith',
+    'encode',
+    'maketrans',
+    'expandtabs',
+    'format', 'format_map',
+    'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'islower', 'isnumeric', 'isspace', 'istitle', 'isupper',
+    'join',
+    'split', 'splitlines', 'strip', 'rsplit',
+    'replace'
 
 """
 

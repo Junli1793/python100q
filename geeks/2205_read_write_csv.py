@@ -10,6 +10,9 @@ https://www.geeksforgeeks.org/reading-and-writing-csv-files-in-python/
 
 import csv
 
+print()
+print("==============Example 1: csv.writer(csvfile)==============")
+
 # field names
 fields = ['Name', 'Branch', 'Year', 'CGPA']
 
@@ -40,6 +43,9 @@ with open(filename, 'w') as csvfile:
 #########################
 # importing the csv module
 import csv
+
+print()
+print("==============Example 2: csv.DictWriter(csvfile, fieldnames=fields)==============")
 
 # my data rows as dictionary objects
 mydict = [{'branch': 'COE', 'cgpa': '9.0',
@@ -77,11 +83,14 @@ with open(filename, 'w') as csvfile:
 # reading from CSV
 #########################
 
-with open('mycsv.csv', mode='r') as file:
+print()
+print("==============Example 3: csv.reader(csvfile)==============")
+
+with open('mycsv.csv', mode='r') as csvfile:
     print(">>>reading mycsv.csv")
     # reading the CSV file
     print(">>>csv.reader(file)")
-    csvreader = csv.reader(file)
+    csvreader = csv.reader(csvfile)
 
     # iterator
     print(type(csvreader))
@@ -93,8 +102,8 @@ with open('mycsv.csv', mode='r') as file:
         print(lines)
 
     print(">>>csv.DictReader(file)")
-    file.seek(0)
-    list_csv_dicreader = list(csv.DictReader(file))
+    csvfile.seek(0)
+    list_csv_dicreader = list(csv.DictReader(csvfile))
     print(list_csv_dicreader)
 
     i = 0

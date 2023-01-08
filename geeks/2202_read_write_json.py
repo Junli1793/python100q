@@ -26,6 +26,9 @@ After converting the dictionary to a JSON object, simply write it to a file usin
 import json
 from pprint import pformat
 
+print()
+print("==============Example 1: json.dumps(dict)==============")
+
 # Data to be written
 dictionary = {
     "name": "sathiyajith",
@@ -44,6 +47,9 @@ print()
 # Writing to sample.json
 with open("myjson_1.json", "w") as outfile:
     outfile.write(json_object)
+
+print()
+print("==============Example 1: json.loads(json_str)==============")
 
 dict1 = json.loads(json_object)
 print("json.loads(json_object)")
@@ -69,6 +75,9 @@ dictionary = {
     "phonenumber": "9976770500"
 }
 
+print()
+print("==============Example 2: json.dump(dict)==============")
+
 print("json.dump(dictionary, outfile)")
 print(type(dictionary))
 print(dictionary)
@@ -85,6 +94,9 @@ It takes one parameter:
     File pointer: A file pointer that points to a JSON file.
 """
 # import json
+
+print()
+print("==============Example 2: json.load(json_file)==============")
 
 # Opening JSON file
 with open('myjson_1.json', 'r') as openfile:
@@ -115,6 +127,9 @@ data = """{
 	"Hobbies":["Reading", "Sketching", "Horse Riding"]
 	}"""
 
+print()
+print("==============Example 3: json.loads(json_str)==============")
+
 # parse data:
 print(type(data))
 print(data)
@@ -139,6 +154,9 @@ https://www.geeksforgeeks.org/append-to-json-file-using-python/
 ###########
 
 import json
+
+print()
+print("==============Example 4: Updating a JSON string((json.dumps(dict)))==============")
 
 # JSON data:
 x = """{ "organization":"GeeksForGeeks",
@@ -167,6 +185,8 @@ print(s)
 
 import json
 
+print()
+print("==============Example 5: function to add to JSON (json.dump(dict))==============")
 
 # function to add to JSON
 def write_json(new_data, filename='myjson_3.json'):
