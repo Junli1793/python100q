@@ -1,0 +1,13 @@
+cluster:
+  hostname: 10.79.59.25
+  username: admin
+  password: Admin123
+  proxy: True
+  type: ON-PREM
+  ssh_user: maglev
+  ssh_pass: Maglev123
+  versions:
+    - V1
+    - V2
+  accounts:
+    - TNT0

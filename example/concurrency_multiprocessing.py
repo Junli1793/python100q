@@ -107,3 +107,21 @@ pool.starmap(pump_data, index_list)
 pool.close()
 pool.join()
 
+print()
+print("==============Example 3: Pool + Queue==============")
+
+from multiprocessing import Manager, Pool
+
+def f(q, n):
+    q.put(n*n)
+
+if __name__ == '__main__':
+    with Manager() as manager:
+        q = manager.Queue()
+        with Pool(5) as p:
+            for i in range(10):
+                p.apply_async(f, (q, i))
+            p.close()
+            p.join()
+            while not q.empty():
+                print(q.get())

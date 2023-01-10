@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export PLATFORM="test"
+echo "Exported PLATFORM with value: $PLATFORM"
