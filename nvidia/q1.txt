@@ -1,9 +1,0 @@
-#!/bin/bash
-
-string="Bash also interprets a number of multi-user options"
-
-for word in $string; do
-  if [ ${#word} -lt 6 ]; then
-    echo $word
-  fi
-done

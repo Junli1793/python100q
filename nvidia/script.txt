@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# Import common.sh
-source /home/lynn/test/common.sh
-
-echo $PLATFORM

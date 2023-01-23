@@ -1,7 +1,0 @@
-nvidia compute tool test
-nvidia compute tool test
-hello world
-nvidia compute tool test
-code script
-hello world
-code script
