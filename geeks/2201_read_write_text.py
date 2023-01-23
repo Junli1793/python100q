@@ -5,8 +5,15 @@ https://www.geeksforgeeks.org/reading-writing-text-files-python/
 """
 
 # Open file does not exist
-# file0 = open("myfile0.txt", "r")
-# file0 = open("myfile0.txt", "r+")
+try:
+    file0 = open("myfile0.txt", "r")
+except FileNotFoundError as e:
+    print(">>>ERROR:", e)
+
+try:
+    file0 = open("myfile0.txt", "r+")
+except FileNotFoundError as e:
+    print(">>>ERROR:", e)
 
 
 # Open function to open the file "MyFile1.txt"

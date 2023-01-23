@@ -10,8 +10,9 @@
 '''
 
 from functools import wraps
+from urllib import request
 
- 
+
 def requires_auth(f):
 
     @wraps(f)

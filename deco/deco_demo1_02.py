@@ -11,7 +11,7 @@ def deco(func):
         print("before myfunc() called.") 
         func() 
         print("after myfunc() called.")  
-            # 不需要返回func，实际上应返回原函数的返回值 
+        # 不需要返回func，实际上应返回原函数的返回值
 
     return _deco 
 
