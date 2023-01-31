@@ -44,3 +44,27 @@ def mult_dict(func, c, **params):
 
 r3 = mult_dict(add_params, c, b=2, a=1)
 print(r3)
+
+print()
+print("==============Example 3: closure==============")
+
+
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        # Modify the behavior of the decorated function
+        print('Before calling the decorated function')
+        result = func(*args, **kwargs)
+        print('After calling the decorated function')
+        return result
+    return wrapper
+
+
+def my_function(a, b):
+    print(a + b)
+
+
+my_function = my_decorator(my_function)
+
+my_function(1, 1)
+my_function(2, 3)
+my_function(5, 8)
