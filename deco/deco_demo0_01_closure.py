@@ -15,12 +15,12 @@ print()
 print("==============Example 1==============")
 
 
-def add_params(a, b):
-    return a + b
+def add_params(a1, b1):
+    return a1 + b1
 
 
-def mult_params(func, a, b, c):
-    return func(a, b) * c
+def mult_params(func, a1, b1, c1):
+    return func(a1, b1) * c1
 
 
 a, b, c = 1, 2, 3
@@ -38,8 +38,8 @@ print()
 print("==============Example 2==============")
 
 
-def mult_dict(func, c, **params):
-    return func(**params) * c
+def mult_dict(func, c2, **params):
+    return func(**params) * c2
 
 
 r3 = mult_dict(add_params, c, b=2, a=1)
@@ -59,8 +59,8 @@ def my_decorator(func):
     return wrapper
 
 
-def my_function(a, b):
-    print(a + b)
+def my_function(a3, b3):
+    print(a3 + b3)
 
 
 my_function = my_decorator(my_function)
@@ -68,3 +68,17 @@ my_function = my_decorator(my_function)
 my_function(1, 1)
 my_function(2, 3)
 my_function(5, 8)
+
+
+print()
+print("==============Example 4: lambda==============")
+
+
+def myfunc(n):
+    return lambda a4: a4 * n
+
+
+mydoubler = myfunc(2)
+mytripler = myfunc(3)
+print(mydoubler(11))
+print(mytripler(11))
